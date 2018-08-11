@@ -1,0 +1,5 @@
+---
+
+- name: brew linkapps emacs-plus
+  shell: brew linkapps emacs-plus
+

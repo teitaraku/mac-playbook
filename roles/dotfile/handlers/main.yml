@@ -1,0 +1,5 @@
+---
+
+- name: execute script
+  command: $HOME/dotfiles/dotfilesLink.sh
+

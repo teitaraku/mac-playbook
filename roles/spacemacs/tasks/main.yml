@@ -1,0 +1,21 @@
+---
+
+- name: clone spacemacs
+  git:
+    repo: 'https://github.com/syl20bnr/spacemacs'
+    dest: $HOME/.emacs.d
+
+- name: check emacs-plus
+  shell: brew tap | grep emacs-plus
+  register: emacs_plus_check
+  changed_when: False
+
+- name: brew tap d12frosted/emacs-plus
+  shell: brew tap d12frosted/emacs-plus
+  when: emacs_plus_check.rc == 1
+
+- name: brew install emacs-plus
+  homebrew:
+    name: emacs-plus
+    state: present
+

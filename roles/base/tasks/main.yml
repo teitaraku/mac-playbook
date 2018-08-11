@@ -1,0 +1,11 @@
+---
+
+- name: show hidden files
+  osx_defaults:
+    domain: com.apple.finder
+    key: AppleShowAllFiles
+    type: string
+    value: true
+    state: present
+  notify: restart finder
+

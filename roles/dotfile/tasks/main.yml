@@ -1,0 +1,8 @@
+---
+
+- name: clone dotfile repository
+  git:
+    repo: 'https://github.com/teitaraku/dotfiles.git'
+    dest: $HOME/dotfiles
+  notify: execute script
+
